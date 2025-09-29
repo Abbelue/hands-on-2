@@ -11,7 +11,7 @@ def calcenergy(atoms):
     epot = atoms.get_potential_energy() / len(atoms)
     ekin = atoms.get_kinetic_energy() / len(atoms)
     etot = epot + ekin
-    inst_temp = ekin / (1.5 * units.kB)
+    inst_temp = ekin / (1.5 * units.kB) * 100 / 100
 
     return [epot, ekin, etot, inst_temp]
 
